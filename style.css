@@ -1,0 +1,277 @@
+:root{
+  --verde:#1f6f54;
+  --verde2:#0f3d2e;
+  --amarillo:#f7c948;
+  --gris:#f4f4f4;
+  --oscuro:#111;
+  --blanco:#fff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: var(--blanco);
+  color: var(--oscuro);
+  line-height: 1.6;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+}
+
+.navbar{
+  max-width: 1100px;
+  margin:auto;
+  padding: 15px 20px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--verde2);
+  letter-spacing: 0.5px;
+}
+
+.logo span{
+  color: var(--amarillo);
+}
+
+nav a{
+  text-decoration:none;
+  color: var(--oscuro);
+  margin-left: 18px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+nav a:hover{
+  color: var(--verde);
+}
+
+.hero{
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+  url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding: 0 20px;
+}
+
+.hero-content{
+  max-width: 850px;
+  color: white;
+  margin-top: 60px;
+}
+
+.hero h1{
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.hero p{
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.btn{
+  display:inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration:none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.btn-primary{
+  background: var(--amarillo);
+  color: var(--oscuro);
+}
+
+.btn-primary:hover{
+  transform: scale(1.03);
+}
+
+.btn-secondary{
+  border: 2px solid white;
+  color: white;
+  margin-left: 10px;
+}
+
+.btn-secondary:hover{
+  background: white;
+  color: black;
+}
+
+.section{
+  padding: 80px 20px;
+}
+
+.container{
+  max-width: 1100px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom: 45px;
+}
+
+.section-title h2{
+  font-size: 30px;
+  color: var(--verde2);
+}
+
+.section-title p{
+  color: #555;
+  margin-top: 10px;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card{
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+}
+
+.card h3{
+  margin-bottom: 10px;
+  color: var(--verde);
+}
+
+.card p{
+  color:#444;
+  font-size: 14px;
+}
+
+.highlight{
+  background: var(--gris);
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.2s;
+}
+
+.gallery img:hover{
+  transform: scale(1.02);
+}
+
+.info{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.info-box{
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid #eee;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.06);
+}
+
+.info-box h3{
+  color: var(--verde2);
+  margin-bottom: 10px;
+}
+
+.info-box ul{
+  list-style: none;
+}
+
+.info-box ul li{
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.info-box ul li:last-child{
+  border-bottom:none;
+}
+
+footer{
+  background: var(--verde2);
+  color:white;
+  text-align:center;
+  padding: 25px 15px;
+}
+
+footer p{
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.whatsapp{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: #25D366;
+  color:white;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 28px;
+  text-decoration:none;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.whatsapp:hover{
+  transform: scale(1.05);
+}
+
+@media(max-width: 900px){
+  .grid-3{
+    grid-template-columns: 1fr;
+  }
+  .gallery{
+    grid-template-columns: 1fr;
+  }
+  .info{
+    grid-template-columns: 1fr;
+  }
+  .hero h1{
+    font-size: 34px;
+  }
+}
