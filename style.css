@@ -538,3 +538,20 @@ footer p{
     font-size: 19px;
   }
 }
+#atracciones .grid-3 {
+  gap: 35px;
+  margin-bottom: 50px;
+}
+
+#atracciones .card {
+  margin-bottom: 15px;
+}
+
+#galeria {
+  padding-top: 60px;
+}
+
+.gallery {
+  margin-top: 30px;
+  gap: 25px;
+}
