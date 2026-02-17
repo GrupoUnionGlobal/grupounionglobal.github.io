@@ -616,3 +616,50 @@ footer p{
 .name{
   opacity: 0.9;
 }
+
+/* ==============================
+   FAQ
+============================== */
+
+.faq-box{
+  max-width: 900px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-box details{
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  padding: 18px 20px;
+  box-shadow: 0px 8px 22px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
+}
+
+.faq-box details:hover{
+  transform: translateY(-3px);
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.10);
+  border: 1px solid rgba(247, 201, 72, 0.45);
+}
+
+.faq-box summary{
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--verde2);
+  list-style: none;
+}
+
+.faq-box summary::-webkit-details-marker{
+  display: none;
+}
+
+.faq-box details p{
+  margin-top: 12px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+}
