@@ -263,9 +263,10 @@ footer p{
   z-index: 999;
 }
 
-.whatsapp:hover{
-  transform: scale(1.05);
-}
+.whatsapp img{
+  width: 32px;
+  height: 32px;
+}  
 
 @media(max-width: 900px){
   .grid-3{
