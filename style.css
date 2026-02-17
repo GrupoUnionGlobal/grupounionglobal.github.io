@@ -32,12 +32,25 @@ header{
 }
 
 .navbar{
-  max-width: 1100px;
-  margin:auto;
-  padding: 15px 20px;
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
+  nav a{
+  position: relative;
+  padding-bottom: 6px;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0%;
+  height:2px;
+  background: var(--amarillo);
+  transition: 0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
 }
 
 .logo{
@@ -89,14 +102,11 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size: 45px;
-  margin-bottom: 15px;
+  text-shadow: 0px 6px 18px rgba(0,0,0,0.55);
 }
 
 .hero p{
-  font-size: 18px;
-  margin-bottom: 25px;
-  opacity: 0.9;
+  text-shadow: 0px 4px 12px rgba(0,0,0,0.45);
 }
 
 .btn{
@@ -419,4 +429,11 @@ footer p{
     opacity: 1;
     transform: translateY(0);
   }
+}
+.section{
+  padding: 90px 20px;
+}
+
+.highlight{
+  background: linear-gradient(180deg, #f4f4f4, #ffffff);
 }
