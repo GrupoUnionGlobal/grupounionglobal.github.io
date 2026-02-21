@@ -663,3 +663,50 @@ footer p{
   color: #444;
   line-height: 1.7;
 }
+/* ==============================
+   REDES SOCIALES FLOTANTES
+============================== */
+
+.social-float{
+  position: fixed;
+  right: 18px;
+  bottom: 95px; /* arriba del WhatsApp */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 998;
+}
+
+.social-btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+  transition: 0.2s ease;
+}
+
+.social-btn img{
+  width: 26px;
+  height: 26px;
+}
+
+.social-btn:hover{
+  transform: scale(1.1);
+}
+
+/* Colores oficiales */
+
+.facebook{
+  background: #1877F2;
+}
+
+.instagram{
+  background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.tiktok{
+  background: #000;
+}
