@@ -663,9 +663,6 @@ footer p{
   color: #444;
   line-height: 1.7;
 }
-/* ==============================
-   BOTONES REDES COMO WHATSAPP
-============================== */
 
 .facebook-float,
 .instagram-float,
@@ -679,32 +676,16 @@ footer p{
   justify-content:center;
   align-items:center;
   box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
-  z-index: 998;
+  z-index: 999;
   transition: 0.2s ease;
+  color:white;
+  font-size:24px;
 }
 
-.facebook-float img,
-.instagram-float img,
-.tiktok-float img{
-  width: 32px;
-  height: 32px;
-}
-
-/* Posiciones (encima de WhatsApp) */
-.facebook-float{
-  bottom: 230px;
-  background:#1877F2;
-}
-
-.instagram-float{
-  bottom: 160px;
-  background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-}
-
-.tiktok-float{
-  bottom: 90px;
-  background:#000;
-}
+/* Posiciones */
+.facebook-float{ bottom: 230px; background:#1877F2; }
+.instagram-float{ bottom: 160px; background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); }
+.tiktok-float{ bottom: 90px; background:#000; }
 
 /* Hover */
 .facebook-float:hover,
