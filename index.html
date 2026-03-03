@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parque de la Panela</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <img src="img/LOGO.png" alt="Logo Parque de la Panela">
-      </div>
-
-      <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#atracciones">Atracciones</a>
-        <a href="#galeria">Galería</a>
-        <a href="#visitanos">Visítanos</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="img/LOGO.png" alt="Logo Parque de la Panela">
     </div>
-  </header>
 
-  <section class="hero">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#atracciones">Atracciones</a>
+      <a href="#galeria">Galería</a>
+      <a href="#visitanos">Visítanos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero" id="inicio">
 
   <div class="hero-slide active" style="background-image: url('img/MULAS 1.jpeg');"></div>
   <div class="hero-slide" style="background-image: url('img/MULAS 2 (FILTRO).png');"></div>
@@ -36,267 +40,163 @@
 
   <div class="hero-content">
     <h1>Vive la experiencia de la Panela</h1>
-    <p>Naturaleza, tradición, cultura y tradición campesina.</p>
+    <p>Naturaleza, tradición y cultura campesina en un solo lugar.</p>
 
     <div class="hero-buttons">
-      <a href="#visita" class="btn btn-primary">Planifica tu visita</a>
+      <a href="#visitanos" class="btn btn-primary">Planifica tu visita</a>
       <a href="#contacto" class="btn btn-outline">Contáctanos</a>
     </div>
   </div>
 
 </section>
 
-  <section class="section highlight" id="experiencia">
-    <div class="container">
-      <div class="section-title">
-        <h2>Una experiencia turística única</h2>
-        <p>
-          El Parque de la Panela es un destino diseñado para disfrutar la tradición panelera,
-          la naturaleza y la cultura campesina.
-        </p>
+<!-- EXPERIENCIA -->
+<section class="section highlight" id="experiencia">
+  <div class="container">
+    <div class="section-title">
+      <h2>Una experiencia turística única</h2>
+      <p>
+        El Parque de la Panela es un destino diseñado para disfrutar la tradición panelera,
+        la naturaleza y la cultura campesina.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>🍯 Ruta de la Panela</h3>
+        <p>Conoce el proceso tradicional desde la caña hasta la panela.</p>
       </div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>🍯 Ruta de la Panela</h3>
-          <p>
-            Conoce el proceso tradicional desde la caña hasta la panela, en una experiencia auténtica.
-          </p>
-        </div>
+      <div class="card">
+        <h3>🌿 Naturaleza y aire puro</h3>
+        <p>Caminatas, paisajes y desconexión total del ruido de la ciudad.</p>
+      </div>
 
-        <div class="card">
-          <h3>🌿 Naturaleza y aire puro</h3>
-          <p>
-            Caminatas, paisajes y un ambiente perfecto para desconectarte del ruido de la ciudad.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>📸 Turismo cultural</h3>
-          <p>
-            Vive actividades campesinas, gastronomía típica y espacios ideales para fotos inolvidables.
-          </p>
-        </div>
+      <div class="card">
+        <h3>📸 Turismo cultural</h3>
+        <p>Actividades campesinas y espacios ideales para fotos inolvidables.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section" id="atracciones">
-    <div class="container">
-      <div class="section-title">
-        <h2>Atracciones principales</h2>
-        <p>Actividades para toda la familia, grupos turísticos y visitantes nacionales e internacionales.</p>
-      </div>
-
-      <div class="grid-3">
-
-        <div class="card activity-card">
-          <div class="activity-header">
-            <div class="activity-icon">🚜</div>
-            <h3>Recorrido guiado</h3>
-          </div>
-          <p>Aprende sobre la caña, el trapiche y el proceso artesanal con guías locales.</p>
-        </div>
-
-        <div class="card activity-card">
-          <div class="activity-header">
-            <div class="activity-icon">🍯</div>
-            <h3>Degustación de panela</h3>
-          </div>
-          <p>Prueba la panela recién hecha, jugos naturales y sabores típicos de la región.</p>
-        </div>
-
-        <div class="card activity-card">
-          <div class="activity-header">
-            <div class="activity-icon">📸</div>
-            <h3>Zona fotográfica</h3>
-          </div>
-          <p>Captura momentos únicos en el trapiche y paisajes rurales perfectos para fotos.</p>
-        </div>
-
-      </div>
+<!-- ATRACCIONES -->
+<section class="section" id="atracciones">
+  <div class="container">
+    <div class="section-title">
+      <h2>Atracciones principales</h2>
+      <p>Actividades para toda la familia y grupos turísticos.</p>
     </div>
-  </section>
 
-  <section class="section highlight" id="galeria">
-    <div class="container">
-      <div class="section-title">
-        <h2>Galería</h2>
-        <p>Explora algunos de los paisajes y lugares más representativos del Parque de la Panela.</p>
+    <div class="grid-3">
+
+      <div class="card activity-card">
+        <h3>🚜 Recorrido guiado</h3>
+        <p>Aprende sobre la caña y el proceso artesanal con guías locales.</p>
       </div>
 
-      <div class="gallery">
-        <img src="img/LA PIEDRA.jpeg" alt="La piedra">
-        <img src="img/PUENTE.jpeg" alt="Puente">
-        <img src="img/QUESOLADO 2.jpg" alt="Quesolado">
+      <div class="card activity-card">
+        <h3>🍯 Degustación de panela</h3>
+        <p>Prueba la panela recién hecha y sabores típicos de la región.</p>
       </div>
+
+      <div class="card activity-card">
+        <h3>📸 Zona fotográfica</h3>
+        <p>Paisajes rurales perfectos para capturar recuerdos únicos.</p>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section highlight" id="testimonios">
+<!-- GALERÍA -->
+<section class="section highlight" id="galeria">
+  <div class="container">
+    <div class="section-title">
+      <h2>Galería</h2>
+    </div>
+
+    <div class="gallery">
+      <img src="img/LA PIEDRA.jpeg" alt="La piedra">
+      <img src="img/PUENTE.jpeg" alt="Puente">
+      <img src="img/QUESOLADO 2.jpg" alt="Quesolado">
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section highlight" id="testimonios">
   <div class="container">
     <div class="section-title">
       <h2>Lo que dicen nuestros visitantes</h2>
-      <p>Experiencias reales de quienes ya vivieron la tradición panelera.</p>
     </div>
 
     <div class="grid-3 testimonials-grid">
 
       <div class="testimonial-card">
-        <p class="testimonial-text">
-          “Una experiencia hermosa, el recorrido es súper cultural y el lugar es espectacular.”
-        </p>
-        <div class="testimonial-footer">
-          <span class="stars">★★★★★</span>
-          <span class="name">— Andrea M.</span>
-        </div>
+        <p>“Una experiencia hermosa y cultural. El lugar es espectacular.”</p>
+        <span>★★★★★ — Andrea M.</span>
       </div>
 
       <div class="testimonial-card">
-        <p class="testimonial-text">
-          “La chiva fue lo mejor 😍 desde el trayecto ya se siente la aventura. Recomendado para familias.”
-        </p>
-        <div class="testimonial-footer">
-          <span class="stars">★★★★★</span>
-          <span class="name">— Grupo Familiar</span>
-        </div>
+        <p>“La chiva fue lo mejor 😍 Una aventura desde el trayecto.”</p>
+        <span>★★★★★ — Grupo Familiar</span>
       </div>
 
       <div class="testimonial-card">
-        <p class="testimonial-text">
-          “Excelente atención, buen ambiente, comida rica y el trapiche es impresionante. Volveremos.”
-        </p>
-        <div class="testimonial-footer">
-          <span class="stars">★★★★★</span>
-          <span class="name">— Juan P.</span>
-        </div>
+        <p>“Excelente atención y ambiente. Volveremos.”</p>
+        <span>★★★★★ — Juan P.</span>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="section" id="faq">
+<!-- VISÍTANOS -->
+<section class="section" id="visitanos">
   <div class="container">
     <div class="section-title">
-      <h2>Preguntas frecuentes</h2>
-      <p>Resuelve tus dudas antes de planear tu visita.</p>
+      <h2>Planifica tu visita</h2>
     </div>
 
-    <div class="faq-box">
+    <div class="map-box">
+      <iframe 
+        src="https://www.google.com/maps?q=4.668333,-75.027694&z=16&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
 
-      <details>
-        <summary>📍 ¿Dónde está ubicado el Parque de la Panela?</summary>
-        <p>Estamos ubicados en zona rural, rodeados de naturaleza. Puedes abrir la ubicación directamente desde Google Maps en la sección “Planifica tu visita”.</p>
-      </details>
-
-      <details>
-        <summary>🚍 ¿Tienen transporte en chiva?</summary>
-        <p>Sí. Contamos con opción de recogida en chiva para grupos turísticos, colegios y familias, para que la experiencia comience desde el trayecto.</p>
-      </details>
-
-      <details>
-        <summary>👨‍👩‍👧‍👦 ¿Es apto para niños y familias?</summary>
-        <p>Totalmente. Es un destino ideal para familias, niños, grupos escolares y visitantes que buscan cultura y naturaleza.</p>
-      </details>
-
-      <details>
-        <summary>📸 ¿Se pueden tomar fotos y grabar videos?</summary>
-        <p>Sí, contamos con zonas fotográficas y paisajes perfectos para capturar recuerdos inolvidables.</p>
-      </details>
-
-      <details>
-        <summary>📲 ¿Cómo puedo reservar o pedir información?</summary>
-        <p>Puedes escribirnos directamente por WhatsApp o enviarnos un correo. Te responderemos lo más rápido posible.</p>
-      </details>
-
+    <div class="transport-info">
+      <h4>🚍 Transporte en Chiva</h4>
+      <p>Ofrecemos servicio de recogida en chiva para grupos y familias.</p>
     </div>
   </div>
 </section>
-  
-  <section class="section" id="visitanos">
-    <div class="container">
-      <div class="section-title">
-        <h2>Planifica tu visita</h2>
-        <p>Encuentra la mejor forma de llegar y prepárate para una experiencia inolvidable.</p>
-      </div>
 
-      <div class="location-full">
-        <div class="location-card">
-
-          <div class="location-header">
-            <h3>🗺️ ¿Cómo llegar?</h3>
-            <p>Puedes llegar en vehículo particular o transporte local.</p>
-          </div>
-
-          <div class="map-box">
-            <iframe 
-              src="https://www.google.com/maps?q=4.668333,-75.027694&hl=es&z=16&output=embed"
-              allowfullscreen=""
-              loading="lazy">
-            </iframe>
-          </div>
-
-          <div class="location-actions">
-            <a class="btn btn-primary" href="https://www.google.com/maps?q=4.668333,-75.027694" target="_blank">
-              📍 Abrir ubicación en Google Maps
-            </a>
-          </div>
-
-          <div class="transport-info">
-            <h4>🚍 Transporte en Chiva</h4>
-            <p>
-              Ofrecemos servicio de <b>recogida en chiva</b> para grupos turísticos, colegios y familias.
-              Una experiencia auténtica desde el trayecto.
-            </p>
-          </div>
-
-          <div class="recommendation">
-            <p><b>Recomendación:</b> trae ropa cómoda, cámara y muchas ganas de vivir el campo 🌿</p>
-          </div>
-
-        </div>
-      </div>
+<!-- CONTACTO -->
+<section class="section highlight" id="contacto">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contacto</h2>
     </div>
-  </section>
 
-  <section class="section highlight" id="contacto">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contacto</h2>
-        <p>Reserva tu visita o pide información para grupos turísticos.</p>
-      </div>
-
-      <div class="info">
-        <div class="info-box">
-          <h3>📞 Contáctanos</h3>
-          <ul>
-            <li><b>WhatsApp:</b> +57 310 293 1770</li>
-            <li><b>Email:</b> contacto@parquedelapanela.com</li>
-            <li><b>Redes:</b> @parquedelapanela</li>
-          </ul>
-        </div>
-
-        <div class="info-box">
-          <h3>🌟 Próximamente</h3>
-          <p style="font-size:14px; color:#444;">
-            Estamos construyendo experiencias premium para visitantes:
-            eventos culturales, rutas guiadas y experiencias paneleras exclusivas.
-          </p>
-        </div>
-      </div>
-
+    <div class="info-box">
+      <p><b>WhatsApp:</b> +57 310 293 1770</p>
+      <p><b>Email:</b> contacto@parquedelapanela.com</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Parque de la Panela. Todos los derechos reservados.</p>
-  </footer>
+<footer>
+  <p>© 2026 Parque de la Panela. Todos los derechos reservados.</p>
+</footer>
 
-  <a class="whatsapp" href="https://wa.me/573102931770" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
-  <a class="facebook-float" href="https://facebook.com/parquedelapanela" target="_blank">
+<!-- BOTONES FLOTANTES -->
+<a class="whatsapp" href="https://wa.me/573102931770" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<a class="facebook-float" href="https://facebook.com/parquedelapanela" target="_blank">
   <i class="fa-brands fa-facebook"></i>
 </a>
 
@@ -307,6 +207,8 @@
 <a class="tiktok-float" href="https://tiktok.com/@parquedelapanela" target="_blank">
   <i class="fa-brands fa-tiktok"></i>
 </a>
+
 <script src="script.js"></script>
+
 </body>
 </html>
