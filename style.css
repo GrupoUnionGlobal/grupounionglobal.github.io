@@ -762,3 +762,46 @@ footer p{
   left: 0;
   z-index: 1;
 }
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3; /* MÁS ALTO que las imágenes */
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+}
