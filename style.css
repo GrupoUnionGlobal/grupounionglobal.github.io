@@ -805,3 +805,9 @@ footer p{
   max-width: 800px;
   padding: 20px;
 }
+.facebook-float,
+.instagram-float,
+.tiktok-float,
+.whatsapp {
+  z-index: 99999 !important;
+}
