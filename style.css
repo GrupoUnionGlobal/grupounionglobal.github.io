@@ -693,3 +693,33 @@ footer p{
 .tiktok-float:hover{
   transform: scale(1.1);
 }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+.facebook-float,
+.instagram-float,
+.tiktok-float {
+  position: fixed;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 26px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: 0.3s ease;
+}
+
+/* Posición vertical */
+.facebook-float { bottom: 230px; background: #1877F2; }
+.instagram-float { bottom: 160px; background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
+.tiktok-float { bottom: 90px; background: #000; }
+
+/* Efecto hover */
+.facebook-float:hover,
+.instagram-float:hover,
+.tiktok-float:hover {
+  transform: scale(1.1);
+}
