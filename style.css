@@ -350,3 +350,73 @@ footer{
     height:320px;
   }
 }
+
+/* ================= POPUP ================= */
+
+.popup-overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999999;
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s ease;
+}
+
+.popup-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.popup-content{
+  background:white;
+  padding:30px 25px;
+  border-radius:20px;
+  max-width:400px;
+  text-align:center;
+  box-shadow:0px 20px 50px rgba(0,0,0,0.3);
+  position:relative;
+  animation: fadeUp 0.5s ease;
+}
+
+.popup-content h2{
+  color: var(--verde2);
+  margin-bottom:15px;
+}
+
+.popup-content p{
+  font-size:14px;
+  color:#444;
+  margin-bottom:10px;
+}
+
+.popup-highlight{
+  font-size:16px;
+  color: var(--verde);
+  margin:15px 0;
+}
+
+.popup-content ul{
+  text-align:left;
+  font-size:14px;
+  margin:10px 0 20px;
+}
+
+.popup-content li{
+  margin-bottom:5px;
+}
+
+/* botón cerrar */
+.close-popup{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:22px;
+  cursor:pointer;
+}
