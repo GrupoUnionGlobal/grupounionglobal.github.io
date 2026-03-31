@@ -1,43 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // ================= SLIDER =================
   const slides = document.querySelectorAll(".hero-slide");
   let current = 0;
 
-  if (slides.length === 0) return;
+  if (slides.length > 0) {
+    function changeSlide() {
+      slides[current].classList.remove("active");
 
-  function changeSlide() {
-    slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
 
-    current++;
-    if (current >= slides.length) {
-      current = 0;
+      slides[current].classList.add("active");
     }
 
-    slides[current].classList.add("active");
+    setInterval(changeSlide, 3000); // más fluido (3s)
   }
 
-  setInterval(changeSlide, 4000);
+  // ================= POPUP =================
+  const popup = document.getElementById("popup");
+  const closeBtn = document.querySelector(".close-popup");
 
-});
+  if (popup) {
 
-// ================= POPUP =================
+    // Mostrar popup después de 1 segundo
+    setTimeout(() => {
+      popup.classList.add("active");
+    }, 1000);
 
-const popup = document.getElementById("popup");
-const closeBtn = document.querySelector(".close-popup");
+    // Cerrar con botón
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        popup.classList.remove("active");
+      });
+    }
 
-// Mostrar popup después de 1 segundo
-setTimeout(() => {
-  popup.classList.add("active");
-}, 1000);
-
-// Cerrar con botón
-closeBtn.addEventListener("click", () => {
-  popup.classList.remove("active");
-});
-
-// Cerrar al hacer clic afuera
-popup.addEventListener("click", (e) => {
-  if (e.target === popup) {
-    popup.classList.remove("active");
+    // Cerrar al hacer clic afuera
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.classList.remove("active");
+      }
+    });
   }
+
 });
