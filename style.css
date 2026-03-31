@@ -420,3 +420,10 @@ footer{
   font-size:22px;
   cursor:pointer;
 }
+.popup-img{
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
