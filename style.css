@@ -406,3 +406,21 @@ nav a:hover::after{
   border-radius:12px;
   margin-bottom:15px;
 }
+
+.coop-box{
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #f7fbf7);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(15, 61, 46, 0.1);
+}
+
+.coop-box p{
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
