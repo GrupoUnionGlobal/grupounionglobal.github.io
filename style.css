@@ -424,3 +424,21 @@ nav a:hover::after{
   margin-bottom: 20px;
   line-height: 1.7;
 }
+
+.mapa-img-box{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa-img-box img{
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0px 15px 40px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.mapa-img-box img:hover{
+  transform: scale(1.02);
+}
