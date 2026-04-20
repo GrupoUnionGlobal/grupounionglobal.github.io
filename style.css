@@ -611,3 +611,79 @@ nav a:hover::after{
   background:linear-gradient(to right,var(--verde),var(--amarillo));
   z-index:1;
 }
+/* ================= PLANES PREMIUM ================= */
+
+.plan-card{
+  position: relative;
+  text-align: center;
+  border-radius: 22px;
+  padding: 30px 25px;
+  background: linear-gradient(180deg, #ffffff, #f7fbf8);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: 0.35s;
+  overflow: hidden; /* 🔥 evita cortes raros */
+}
+
+/* HOVER elegante */
+.plan-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+/* BRILLO FINO (sin bug) */
+.plan-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:60%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.25),transparent);
+  transform:skewX(-20deg);
+  transition:0.7s;
+}
+
+.plan-card:hover::after{
+  left:130%;
+}
+
+/* CONTENIDO ENCIMA */
+.plan-card *{
+  position: relative;
+  z-index: 2;
+}
+
+/* LISTA LIMPIA */
+.plan-list{
+  list-style: none; /* 🔥 quita puntos */
+  margin: 18px 0;
+  padding: 0;
+}
+
+.plan-list li{
+  padding: 7px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* DESTACADO PRO */
+.destacado{
+  border: 2px solid var(--amarillo);
+  transform: scale(1.06);
+  background: linear-gradient(180deg,#fff,#fffdf5);
+}
+
+.destacado::before{
+  content: "Más popular";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--amarillo);
+  color: black;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
