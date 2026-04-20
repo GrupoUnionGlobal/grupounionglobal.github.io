@@ -711,3 +711,17 @@ nav a:hover::after{
   color:white;
   box-shadow:0 10px 25px rgba(192,102,22,0.35);
 }
+@media(max-width:900px){
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .steps::before{
+    display:none;
+  }
+
+  .destacado{
+    transform:none;
+  }
+}
