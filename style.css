@@ -466,3 +466,6 @@ nav a:hover::after{
 .map-box iframe:hover{
   transform: scale(1.01);
 }
+.map-box{
+  margin-top: 30px;
+}
