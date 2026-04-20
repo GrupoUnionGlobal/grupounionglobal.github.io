@@ -223,21 +223,26 @@ nav a:hover::after{
 
 /* DESTACADO */
 .destacado{
-  border:2px solid var(--amarillo);
-  transform:scale(1.05);
+  position: relative;
+  border: 2px solid var(--amarillo);
+  transform: scale(1.05);
+  overflow: visible; /* 🔥 clave */
 }
 
 .destacado::before{
-  content:"Más popular";
-  position:absolute;
-  top:-12px;
-  left:50%;
-  transform:translateX(-50%);
-  background:var(--amarillo);
-  padding:5px 12px;
-  border-radius:10px;
-  font-size:12px;
-  font-weight:bold;
+  content: "Más popular";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--amarillo);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 20;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 /* HOVER PRO */
