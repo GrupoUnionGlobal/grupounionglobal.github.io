@@ -413,3 +413,12 @@ nav a:hover::after{
   .hero h1{font-size:34px;}
   .logo img{height:65px;}
 }
+.gallery img{
+  cursor: pointer;
+}
+
+/* efecto overlay tipo turístico */
+.gallery img:hover{
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
