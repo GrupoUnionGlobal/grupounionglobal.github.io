@@ -449,3 +449,73 @@ nav a:hover::after{
     height:65px;
   }
 }
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  overflow:visible; /* 🔥 esto evita cortes */
+}
+.plan-card{
+  position:relative;
+  overflow:hidden;
+}
+
+.plan-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-150%;
+  width:80%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  transform:skewX(-25deg);
+  transition:0.8s;
+  z-index:1;
+}
+
+.plan-card:hover::after{
+  left:150%;
+}
+
+.plan-card > *{
+  position:relative;
+  z-index:2;
+}
+.whatsapp,
+.facebook-float,
+.instagram-float,
+.tiktok-float{
+  position:fixed;
+  right:20px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:22px;
+  z-index:99999; /* 🔥 MÁS ALTO QUE TODO */
+  transition:.2s;
+}
+.facebook-float i,
+.instagram-float i,
+.tiktok-float i{
+  color:white;
+}
+
+.whatsapp img{
+  width:28px;
+  height:28px;
+}
+.popup-overlay{
+  z-index:9999;
+}
+.popup-overlay{
+  z-index:9000; /* 🔥 debajo de redes */
+}
