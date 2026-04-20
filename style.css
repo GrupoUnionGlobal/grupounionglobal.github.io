@@ -423,3 +423,14 @@ nav a:hover::after{
   .hero h1{font-size:34px;}
   .logo img{height:65px;}
 }
+.btn-kids{
+  background:#c06616;
+  color:white;
+  border:none;
+  box-shadow: 0 8px 20px rgba(192,102,22,0.4);
+}
+
+.btn-kids:hover{
+  background:#a95412;
+  transform: translateY(-3px);
+}
