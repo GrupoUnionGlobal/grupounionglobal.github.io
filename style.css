@@ -442,3 +442,47 @@ nav a:hover::after{
 .mapa-img-box img:hover{
   transform: scale(1.02);
 }
+/* ================= PLANES ================= */
+
+.plan-card{
+  text-align: center;
+  position: relative;
+}
+
+.plan-price{
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--verde2);
+  margin: 10px 0 15px;
+}
+
+.plan-list{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.plan-list li{
+  padding: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Plan destacado */
+.destacado{
+  border: 2px solid var(--amarillo);
+  transform: scale(1.05);
+}
+
+.destacado::before{
+  content: "Más popular";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--amarillo);
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
