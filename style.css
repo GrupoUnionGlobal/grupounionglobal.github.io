@@ -197,7 +197,7 @@ nav a:hover::after{
 .plan-card{
   text-align:center;
   position:relative;
-  overflow:hidden;
+  overflow:visible;
   background:linear-gradient(#fff,#f7fbf7);
 }
 
@@ -226,7 +226,6 @@ nav a:hover::after{
   position: relative;
   border: 2px solid var(--amarillo);
   transform: scale(1.05);
-  overflow: visible; /* 🔥 clave */
 }
 
 .destacado::before{
@@ -311,7 +310,7 @@ nav a:hover::after{
   box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* POPUP (CORREGIDO) */
+/* POPUP */
 .popup-overlay{
   position:fixed;
   top:0;
@@ -323,13 +322,16 @@ nav a:hover::after{
   justify-content:center;
   align-items:center;
   z-index:9999;
+  pointer-events:none;
 }
 
 .popup-overlay.active{
   display:flex;
+  pointer-events:auto;
 }
 
 .popup-content{
+  position:relative;
   background:white;
   padding:25px;
   border-radius:18px;
@@ -340,20 +342,20 @@ nav a:hover::after{
 }
 
 .close-popup{
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  font-size: 26px;
-  cursor: pointer;
-  color: #333; /* 🔥 clave */
-  font-weight: bold;
-  z-index: 10;
-  transition: 0.2s;
+  position:absolute;
+  top:12px;
+  right:15px;
+  font-size:26px;
+  cursor:pointer;
+  color:#333;
+  font-weight:bold;
+  z-index:10;
+  transition:0.2s;
 }
 
 .close-popup:hover{
-  color: var(--verde);
-  transform: scale(1.2);
+  color:var(--verde);
+  transform:scale(1.2);
 }
 
 /* ANIMACIÓN */
@@ -362,24 +364,52 @@ nav a:hover::after{
   to{opacity:1; transform:translateY(0);}
 }
 
+/* WHATSAPP */
+.whatsapp{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.whatsapp img{
+  width:32px;
+}
+
+/* REDES */
+.facebook-float,
+.instagram-float,
+.tiktok-float{
+  position: fixed;
+  right:20px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:26px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  z-index:9999;
+}
+
+.facebook-float{ bottom:230px; background:#1877F2; }
+.instagram-float{ bottom:160px; background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
+.tiktok-float{ bottom:90px; background:#000; }
+
 /* RESPONSIVE */
 @media(max-width:900px){
   .grid-3{grid-template-columns:1fr;}
   .gallery{grid-template-columns:1fr;}
   .hero h1{font-size:34px;}
   .logo img{height:65px;}
-}
-.destacado::before{
-  content: "Más popular";
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--amarillo);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
-  z-index: 10;
 }
