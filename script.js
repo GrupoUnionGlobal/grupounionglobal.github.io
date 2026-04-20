@@ -1,3 +1,6 @@
+.popup-overlay{
+  z-index: 20000; /* 🔥 encima de TODO */
+}
 document.addEventListener("DOMContentLoaded", function () {
 
   // ================= SLIDER =================
