@@ -741,3 +741,29 @@ html, body{
   width:100%;
   max-width:100%;
 }
+.footer{
+  width:100%;
+  background: linear-gradient(180deg, #0f3d2e, #0b2e23);
+  color:white;
+  margin:0;
+  padding:0;
+}
+
+/* 🔥 contenedor interno SIN limitar fondo */
+.footer-content{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px 30px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-bottom{
+  width:100%;
+  border-top:1px solid rgba(255,255,255,0.15);
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  color:rgba(255,255,255,0.7);
+}
