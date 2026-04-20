@@ -258,6 +258,8 @@ nav a:hover::after{
   height:100%;
   background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
   transition:0.6s;
+  pointer-events:none; /* 🔥 CLAVE */
+  z-index:1; /* 🔥 debajo del contenido */
 }
 
 .plan-card:hover::after{
@@ -433,4 +435,15 @@ nav a:hover::after{
 .btn-kids:hover{
   background:#a95412;
   transform: translateY(-3px);
+}
+.plan-buttons{
+  position: relative;
+  z-index: 2;
+}
+.plan-card > *{
+  position: relative;
+  z-index: 2;
+}
+.plan-card::after{
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent);
 }
