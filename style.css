@@ -6,12 +6,11 @@
   --oscuro:#111;
   --blanco:#fff;
 
-  --sombra-suave: 0px 10px 30px rgba(0,0,0,0.08);
-  --sombra-media: 0px 18px 45px rgba(0,0,0,0.14);
+  --sombra-suave: 0 10px 30px rgba(0,0,0,0.08);
+  --sombra-media: 0 18px 45px rgba(0,0,0,0.14);
 }
 
-/* ================= RESET ================= */
-
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -25,13 +24,10 @@ body{
   line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 header{
   position: fixed;
   width: 100%;
-  top:0;
-  left:0;
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0,0,0,0.08);
@@ -39,63 +35,60 @@ header{
 }
 
 .navbar{
-  max-width: 1100px;
+  max-width:1100px;
   margin:auto;
-  padding: 12px 20px;
+  padding:12px 20px;
   display:flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items:center;
 }
 
-/* 🔥 LOGO MÁS GRANDE Y PROPORCIONADO */
 .logo img{
-  height: 85px;
-  transition: 0.3s ease;
+  height:85px;
+  transition:0.3s;
 }
 
 .logo img:hover{
-  transform: scale(1.05);
+  transform:scale(1.05);
 }
 
 nav a{
   text-decoration:none;
-  color: var(--oscuro);
-  margin-left: 18px;
-  font-weight: 700;
-  font-size: 14px;
-  position: relative;
-  padding-bottom: 6px;
-}
-
-nav a:hover{
-  color: var(--verde);
+  color:var(--oscuro);
+  margin-left:18px;
+  font-weight:700;
+  font-size:14px;
+  position:relative;
 }
 
 nav a::after{
   content:"";
   position:absolute;
   left:0;
-  bottom:0;
+  bottom:-4px;
   width:0%;
   height:2px;
-  background: var(--amarillo);
-  transition: 0.3s;
+  background:var(--amarillo);
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--verde);
 }
 
 nav a:hover::after{
   width:100%;
 }
 
-/* ================= HERO SLIDER ================= */
-
+/* HERO */
 .hero{
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+  height:100vh;
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
+  overflow:hidden;
 }
 
 .hero-slide{
@@ -105,8 +98,7 @@ nav a:hover::after{
   background-size:cover;
   background-position:center;
   opacity:0;
-  transition: opacity 0.8s ease-in-out; /* 🔥 MÁS RÁPIDO */
-  z-index:1;
+  transition: opacity 0.8s ease;
 }
 
 .hero-slide.active{
@@ -118,15 +110,12 @@ nav a:hover::after{
   position:absolute;
   width:100%;
   height:100%;
-  background: rgba(0,0,0,0.45);
-  top:0;
-  left:0;
-  z-index:2;
+  background:rgba(0,0,0,0.45);
 }
 
 .hero-content{
   position:relative;
-  z-index:3;
+  z-index:2;
   color:white;
   max-width:800px;
   padding:20px;
@@ -137,46 +126,38 @@ nav a:hover::after{
   margin-bottom:15px;
 }
 
-.hero p{
-  font-size:18px;
-  margin-bottom:25px;
-}
-
-/* ================= BOTONES ================= */
-
+/* BOTONES */
 .btn{
   display:inline-block;
-  padding:13px 24px;
+  padding:13px 22px;
   border-radius:14px;
-  text-decoration:none;
   font-weight:bold;
-  font-size:14px;
-  transition:0.3s ease;
+  text-decoration:none;
+  transition:0.3s;
 }
 
 .btn-primary{
-  background: linear-gradient(135deg, #f7c948, #ffdd70);
-  color: var(--oscuro);
-  box-shadow: 0px 10px 25px rgba(247,201,72,0.4);
+  background:linear-gradient(135deg,#f7c948,#ffdd70);
+  color:black;
+  box-shadow:0 10px 25px rgba(247,201,72,0.4);
 }
 
 .btn-primary:hover{
-  transform: translateY(-3px);
+  transform:translateY(-3px);
 }
 
-.btn-secondary{
+.btn-outline{
   border:2px solid white;
   color:white;
-  margin-left:10px;
+  background:rgba(255,255,255,0.1);
 }
 
-.btn-secondary:hover{
+.btn-outline:hover{
   background:white;
   color:black;
 }
 
-/* ================= SECCIONES ================= */
-
+/* SECCIONES */
 .section{
   padding:90px 20px;
 }
@@ -191,31 +172,108 @@ nav a:hover::after{
   margin-bottom:50px;
 }
 
-/* ================= GRID ================= */
-
+/* GRID */
 .grid-3{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:25px;
 }
 
-/* ================= CARDS ================= */
-
+/* CARDS */
 .card{
   background:white;
   border-radius:20px;
-  padding:26px 22px;
-  box-shadow: var(--sombra-suave);
+  padding:25px;
+  box-shadow:var(--sombra-suave);
   transition:0.3s;
 }
 
 .card:hover{
-  transform: translateY(-8px);
-  box-shadow: var(--sombra-media);
+  transform:translateY(-8px);
+  box-shadow:var(--sombra-media);
 }
 
-/* ================= GALERÍA ================= */
+/* PLANES */
+.plan-card{
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(#fff,#f7fbf7);
+}
 
+.plan-price{
+  font-size:26px;
+  font-weight:bold;
+  color:var(--verde2);
+}
+
+.plan-price.kids{
+  font-size:20px;
+  opacity:0.8;
+}
+
+.plan-list{
+  list-style:none;
+  margin:15px 0;
+}
+
+.plan-list li{
+  padding:6px 0;
+}
+
+/* DESTACADO */
+.destacado{
+  border:2px solid var(--amarillo);
+  transform:scale(1.05);
+}
+
+.destacado::before{
+  content:"Más popular";
+  position:absolute;
+  top:-12px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--amarillo);
+  padding:5px 12px;
+  border-radius:10px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* HOVER PRO */
+.plan-card:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 25px 60px rgba(0,0,0,0.18);
+}
+
+.plan-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+  transition:0.6s;
+}
+
+.plan-card:hover::after{
+  left:100%;
+}
+
+/* BOTONES PLAN */
+.plan-buttons{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+.plan-buttons a{
+  flex:1;
+  text-align:center;
+}
+
+/* GALERÍA */
 .gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -231,152 +289,35 @@ nav a:hover::after{
 }
 
 .gallery img:hover{
-  transform: scale(1.03);
+  transform:scale(1.03);
 }
 
-/* ================= MAPA ================= */
-
-.map-box iframe{
-  width:100%;
-  height:450px;
-  border:0;
-  border-radius:20px;
-}
-
-/* ================= BOTONES FLOTANTES ================= */
-
-.whatsapp,
-.facebook-float,
-.instagram-float,
-.tiktok-float{
-  position: fixed;
-  right:20px;
-  width:60px;
-  height:60px;
-  border-radius:50%;
+/* MAPA */
+.mapa-img-box{
   display:flex;
   justify-content:center;
+  margin-top:30px;
+}
+
+.mapa-img-box img{
+  max-width:900px;
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* POPUP (CORREGIDO) */
+.popup-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  justify-content:center;
   align-items:center;
-  color:white;
-  font-size:26px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
   z-index:9999;
-  transition:0.3s ease;
-}
-
-.whatsapp{ bottom:20px; background:#25D366; }
-.facebook-float{ bottom:230px; background:#1877F2; }
-.instagram-float{ bottom:160px; background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
-.tiktok-float{ bottom:90px; background:#000; }
-
-.whatsapp img{
-  width:30px;
-}
-
-.whatsapp:hover,
-.facebook-float:hover,
-.instagram-float:hover,
-.tiktok-float:hover{
-  transform: scale(1.1);
-}
-
-/* ================= POPUP ================= */
-
-.popup-overlay{
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.6);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999999;
-}
-
-.popup-content{
-  background:white;
-  padding:25px;
-  border-radius:18px;
-  max-width:400px;
-  width:90%;
-  text-align:center;
-  position:relative;
-  box-shadow:0px 20px 50px rgba(0,0,0,0.3);
-  animation: fadeUp 0.5s ease;
-}
-
-.popup-img{
-  width:100%;
-  border-radius:12px;
-  margin-bottom:15px;
-}
-
-.popup-highlight{
-  background:#fff8e1;
-  padding:10px;
-  border-radius:10px;
-  margin:10px 0;
-}
-
-.close-popup{
-  position:absolute;
-  top:10px;
-  right:15px;
-  font-size:22px;
-  cursor:pointer;
-}
-
-/* ================= ANIMACIÓN ================= */
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform: translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:900px){
-
-  .grid-3{
-    grid-template-columns:1fr;
-  }
-
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .hero h1{
-    font-size:34px;
-  }
-
-  .map-box iframe{
-    height:320px;
-  }
-
-  .logo img{
-    height:65px;
-  }
-}
-
-.popup-overlay{
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.6);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999999;
 }
 
 .popup-overlay.active{
@@ -386,11 +327,11 @@ nav a:hover::after{
 .popup-content{
   background:white;
   padding:25px;
-  border-radius:20px;
+  border-radius:18px;
   max-width:400px;
   width:90%;
   text-align:center;
-  position:relative;
+  animation:fadeUp 0.4s ease;
 }
 
 .close-popup{
@@ -401,158 +342,16 @@ nav a:hover::after{
   cursor:pointer;
 }
 
-.popup-img{
-  width:100%;
-  border-radius:12px;
-  margin-bottom:15px;
+/* ANIMACIÓN */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
-.coop-box{
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-  background: linear-gradient(180deg, #ffffff, #f7fbf7);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
-  border: 1px solid rgba(15, 61, 46, 0.1);
-}
-
-.coop-box p{
-  font-size: 15px;
-  color: #444;
-  margin-bottom: 20px;
-  line-height: 1.7;
-}
-
-.mapa-img-box{
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.mapa-img-box img{
-  width: 100%;
-  max-width: 900px;
-  border-radius: 20px;
-  box-shadow: 0px 15px 40px rgba(0,0,0,0.15);
-  transition: 0.3s ease;
-}
-
-.mapa-img-box img:hover{
-  transform: scale(1.02);
-}
-/* ================= PLANES ================= */
-
-.plan-card{
-  position: relative;
-  text-align: center;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.35s ease;
-  background: linear-gradient(180deg, #ffffff, #f7fbf7);
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
-}
-
-.plan-price{
-  font-size: 26px;
-  font-weight: bold;
-  color: var(--verde2);
-  margin: 10px 0 15px;
-}
-
-.plan-list{
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.plan-list li{
-  padding: 6px 0;
-  font-size: 14px;
-  color: #333;
-}
-
-/* Plan destacado */
-.destacado{
-  border: 2px solid var(--amarillo);
-  transform: scale(1.05);
-}
-
-.destacado::before{
-  content: "Más popular";
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--amarillo);
-  padding: 5px 12px;
-  border-radius: 10px;
-  font-size: 12px;
-  font-weight: bold;
-}
-.plan-card:hover{
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0px 25px 60px rgba(0,0,0,0.18);
-}
-.plan-card::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
-  transition: 0.6s;
-}
-
-.plan-card:hover::after{
-  left:100%;
-}
-.plan-card:hover .btn-primary{
-  transform: scale(1.05);
-}
-
-.plan-card:hover .btn-outline{
-  background: rgba(255,255,255,0.15);
-}
-.destacado{
-  border: 2px solid var(--amarillo);
-  transform: scale(1.05);
-}
-
-.destacado:hover{
-  transform: translateY(-14px) scale(1.07);
-}
-.plan-buttons{
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-.plan-buttons a{
-  flex: 1;
-  text-align: center;
-}
-
-/* BOTÓN NIÑOS (antes parecía link) */
-.btn-outline{
-  border: 2px solid white;
-  color: white;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(5px);
-  border-radius: 12px;
-  padding: 12px;
-  transition: 0.3s ease;
-}
-
-.btn-outline:hover{
-  background: white;
-  color: black;
-}
-.plan-buttons .btn-outline{
-  color: white !important;
-  border: 2px solid white !important;
-  text-decoration: none !important;
+/* RESPONSIVE */
+@media(max-width:900px){
+  .grid-3{grid-template-columns:1fr;}
+  .gallery{grid-template-columns:1fr;}
+  .hero h1{font-size:34px;}
+  .logo img{height:65px;}
 }
