@@ -384,27 +384,44 @@ nav a:hover::after{
   width:32px;
 }
 
-/* REDES */
+/* ================= BOTONES FLOTANTES ================= */
+
+.whatsapp,
 .facebook-float,
 .instagram-float,
 .tiktok-float{
   position: fixed;
-  right:20px;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:white;
-  font-size:26px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
-  z-index:9999;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 10000; /* 🔥 todos iguales */
+  transition: 0.3s ease;
 }
 
-.facebook-float{ bottom:230px; background:#1877F2; }
-.instagram-float{ bottom:160px; background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
-.tiktok-float{ bottom:90px; background:#000; }
+/* POSICIÓN ESCALONADA */
+.whatsapp{ bottom: 20px; background:#25D366; }
+.tiktok-float{ bottom: 90px; background:#000; }
+.instagram-float{ bottom: 160px; background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
+.facebook-float{ bottom: 230px; background:#1877F2; }
+
+.whatsapp img{
+  width: 28px;
+}
+
+/* HOVER */
+.whatsapp:hover,
+.facebook-float:hover,
+.instagram-float:hover,
+.tiktok-float:hover{
+  transform: scale(1.12);
+}
 
 /* RESPONSIVE */
 @media(max-width:900px){
