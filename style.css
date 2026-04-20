@@ -559,3 +559,11 @@ nav a:hover::after{
 .tiktok-float:hover{
   transform:scale(1.1);
 }
+.destacado{
+  position: relative;
+}
+
+.destacado::before{
+  top: -12px;
+  z-index: 10;
+}
