@@ -1,13 +1,11 @@
-.popup-overlay{
-  z-index: 20000; /* 🔥 encima de TODO */
-}
 document.addEventListener("DOMContentLoaded", function () {
 
-  // ================= SLIDER =================
+  /* ================= SLIDER ================= */
   const slides = document.querySelectorAll(".hero-slide");
   let current = 0;
 
   if (slides.length > 0) {
+
     function changeSlide() {
       slides[current].classList.remove("active");
 
@@ -16,19 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
       slides[current].classList.add("active");
     }
 
-    setInterval(changeSlide, 3000); // más fluido (3s)
+    setInterval(changeSlide, 3500); // un poco más suave
   }
 
-  // ================= POPUP =================
+
+  /* ================= POPUP ================= */
   const popup = document.getElementById("popup");
   const closeBtn = document.querySelector(".close-popup");
 
   if (popup) {
 
-    // Mostrar popup después de 1 segundo
+    // Mostrar popup
     setTimeout(() => {
       popup.classList.add("active");
-    }, 1000);
+    }, 1200);
 
     // Cerrar con botón
     if (closeBtn) {
@@ -37,12 +36,41 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Cerrar al hacer clic afuera
+    // Cerrar haciendo clic afuera
     popup.addEventListener("click", (e) => {
       if (e.target === popup) {
         popup.classList.remove("active");
       }
     });
+
+    // Cerrar con tecla ESC 🔥 (pro)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        popup.classList.remove("active");
+      }
+    });
   }
+
+
+  /* ================= SCROLL SUAVE ================= */
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function(e){
+      const targetId = this.getAttribute("href");
+
+      if (targetId.startsWith("#")) {
+        e.preventDefault();
+
+        const target = document.querySelector(targetId);
+
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth"
+          });
+        }
+      }
+    });
+  });
 
 });
