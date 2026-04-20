@@ -729,3 +729,15 @@ nav a:hover::after{
     transform: none;
   }
 }
+html, body{
+  width:100%;
+  overflow-x:hidden;
+}
+.section{
+  width:100%;
+}
+
+.full-width{
+  width:100%;
+  max-width:100%;
+}
