@@ -445,8 +445,13 @@ nav a:hover::after{
 /* ================= PLANES ================= */
 
 .plan-card{
-  text-align: center;
   position: relative;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  background: linear-gradient(180deg, #ffffff, #f7fbf7);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
 }
 
 .plan-price{
@@ -485,4 +490,37 @@ nav a:hover::after{
   border-radius: 10px;
   font-size: 12px;
   font-weight: bold;
+}
+.plan-card:hover{
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0px 25px 60px rgba(0,0,0,0.18);
+}
+.plan-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transition: 0.6s;
+}
+
+.plan-card:hover::after{
+  left:100%;
+}
+.plan-card:hover .btn-primary{
+  transform: scale(1.05);
+}
+
+.plan-card:hover .btn-outline{
+  background: rgba(255,255,255,0.15);
+}
+.destacado{
+  border: 2px solid var(--amarillo);
+  transform: scale(1.05);
+}
+
+.destacado:hover{
+  transform: translateY(-14px) scale(1.07);
 }
