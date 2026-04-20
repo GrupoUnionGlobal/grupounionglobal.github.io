@@ -725,3 +725,64 @@ nav a:hover::after{
     transform:none;
   }
 }
+/* ================= PLANES FIX TOTAL ================= */
+
+.plan-card{
+  position: relative;
+  text-align: center;
+  border-radius: 22px;
+  padding: 30px 25px;
+  background: linear-gradient(180deg, #ffffff, #f7fbf8);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: 0.35s;
+
+  overflow: hidden; /* 🔥 NECESARIO para el brillo */
+}
+
+/* Hover limpio */
+.plan-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+/* 🔥 BRILLO CORREGIDO (este era el problema) */
+.plan-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-150%;
+  width:80%;
+  height:100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  transition: 0.8s;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.plan-card:hover::after{
+  left:150%;
+}
+
+/* 🔥 CONTENIDO SIEMPRE ENCIMA */
+.plan-card > *{
+  position: relative;
+  z-index: 2;
+}
+.plan-list{
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+}
+
+.plan-list li{
+  padding: 6px 0;
+}
