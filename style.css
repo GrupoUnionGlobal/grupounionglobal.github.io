@@ -574,26 +574,3 @@ nav a:hover::after{
   overflow:hidden; /* aquí sí se recorta el brillo */
   border-radius:22px;
 }
-
-/* mueve el brillo aquí */
-.plan-inner::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-150%;
-  width:80%;
-  height:100%;
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-  transform:skewX(-25deg);
-  transition:0.8s;
-  z-index:1;
-}
-
-.plan-card:hover .plan-inner::after{
-  left:150%;
-}
