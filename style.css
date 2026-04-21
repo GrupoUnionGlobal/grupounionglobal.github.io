@@ -205,7 +205,7 @@ nav a:hover::after{
   background: linear-gradient(180deg,#ffffff,#f7fbf8);
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   transition: 0.35s;
-  overflow: hidden; /* 🔥 clave */
+  overflow: visible;
 }
 
 .plan-card:hover{
@@ -238,10 +238,8 @@ nav a:hover::after{
   transform:skewX(-20deg);
   transition:0.8s ease;
   z-index:1;
-}
 
-.plan-card:hover::after{
-  left:130%;
+  border-radius:22px;
 }
 
 /* PRECIOS */
@@ -496,4 +494,21 @@ nav a:hover::after{
 .instagram-float:hover,
 .tiktok-float:hover{
   transform:scale(1.1);
+}
+.destacado::before{
+  content:"Más popular";
+  position:absolute;
+  top:-14px; /* 🔥 fuera del card */
+  left:50%;
+  transform:translateX(-50%);
+  
+  background:var(--amarillo);
+  padding:7px 20px;
+  border-radius:20px;
+  
+  font-size:12px;
+  font-weight:bold;
+  
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  z-index:10;
 }
