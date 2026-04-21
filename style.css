@@ -204,7 +204,7 @@ nav a:hover::after{
   background: linear-gradient(180deg,#ffffff,#f7fbf8);
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   transition: 0.35s;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .plan-card:hover{
@@ -457,7 +457,7 @@ nav a:hover::after{
 }
 .plan-card{
   position:relative;
-  overflow:hidden;
+  overflow:visible;
 }
 
 .plan-card::after{
