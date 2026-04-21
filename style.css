@@ -58,6 +58,121 @@ header{
   transform:scale(1.05);
 }
 
+nav a{
+  text-decoration:none;
+  color:var(--oscuro);
+  margin-left:18px;
+  font-weight:700;
+  font-size:14px;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0%;
+  height:2px;
+  background:var(--amarillo);
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--verde);
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+.hero-slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity .8s ease;
+}
+
+.hero-slide.active{
+  opacity:1;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:white;
+  max-width:800px;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+/* BOTONES */
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:14px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:.25s ease;
+}
+
+.btn-primary{
+  background: linear-gradient(135deg,#f7c948,#ffdd70);
+  color:black;
+  box-shadow:0 10px 25px rgba(247,201,72,0.35);
+}
+
+.btn-kids{
+  background: linear-gradient(135deg,#c06616,#e07a1f);
+  color:white;
+  box-shadow:0 10px 25px rgba(192,102,22,0.35);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* SECCIONES */
+.section{
+  padding:90px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
 /* GRID */
 .grid-3{
   display:grid;
@@ -66,8 +181,21 @@ header{
   overflow:visible;
 }
 
-/* ================= PLANES ================= */
+/* CARDS */
+.card{
+  background:white;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:var(--sombra-suave);
+  transition:.3s;
+}
 
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--sombra-media);
+}
+
+/* ================= PLANES ================= */
 .plan-card{
   position: relative;
   text-align: center;
@@ -78,7 +206,6 @@ header{
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   transition: 0.35s;
   overflow: visible;
-  isolation: isolate; /* 🔥 clave para capas */
 }
 
 .plan-card:hover{
@@ -92,7 +219,7 @@ header{
   z-index:2;
 }
 
-/* 🔥 BRILLO CORRECTO */
+/* 🔥 BRILLO (SIN BUG) */
 .plan-card::after{
   content:"";
   position:absolute;
@@ -113,10 +240,6 @@ header{
   z-index:1;
 
   border-radius:22px;
-}
-
-.plan-card:hover::after{
-  left:120%; /* 🔥 esto faltaba */
 }
 
 /* PRECIOS */
@@ -142,32 +265,28 @@ header{
   padding:6px 0;
 }
 
-/* 🔥 DESTACADO (FIX REAL) */
+/* DESTACADO */
 .destacado{
   border:2px solid var(--amarillo);
   transform:scale(1.06);
   background:linear-gradient(180deg,#fff,#fffdf5);
+  z-index:2;
   position: relative;
-  z-index:5; /* 🔥 sube por encima del resto */
 }
 
-/* SOLO UNA DEFINICIÓN */
 .destacado::before{
   content:"Más popular";
   position:absolute;
-  top:-14px;
+  top:10px; /* 🔥 cambiado para evitar recorte */
   left:50%;
   transform:translateX(-50%);
-  
   background:var(--amarillo);
-  padding:7px 20px;
+  padding:6px 18px;
   border-radius:20px;
-  
   font-size:12px;
   font-weight:bold;
-  
-  box-shadow:0 10px 25px rgba(0,0,0,0.25);
-  z-index:20; /* 🔥 por encima del brillo */
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  z-index:10;
 }
 
 /* BOTONES */
@@ -181,7 +300,6 @@ header{
   flex:1;
   text-align:center;
 }
-
 /* ================= EXPERIENCIA ================= */
 
 .steps{
@@ -214,8 +332,66 @@ header{
   z-index:2;
 }
 
-/* ================= FOOTER ================= */
+.step:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--sombra-media);
+}
 
+.step-number{
+  width:40px;
+  height:40px;
+  background:var(--verde);
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 10px;
+  font-weight:bold;
+}
+
+/* GALERÍA */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.gallery img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:18px;
+  transition:.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* MAPA */
+.map-box iframe{
+  width:100%;
+  height:400px;
+  border:0;
+  border-radius:20px;
+  display:block;
+  box-shadow:var(--sombra-media);
+}
+
+.mapa-img-box{
+  margin-top:25px;
+  text-align:center;
+}
+
+.mapa-img-box img{
+  width:100%;
+  max-width:900px;
+  border-radius:20px;
+  box-shadow:var(--sombra-media);
+}
+
+/* FOOTER */
 .footer{
   width:100%;
   background:linear-gradient(180deg,#0f3d2e,#0b2e23);
@@ -231,7 +407,54 @@ header{
   gap:40px;
 }
 
-/* ================= REDES ================= */
+.footer a{
+  color:rgba(255,255,255,0.85);
+  text-decoration:none;
+}
+
+.footer a:hover{
+  color:var(--amarillo);
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.15);
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .grid-3,
+  .gallery,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .steps::before{
+    display:none;
+  }
+
+  .destacado{
+    transform:none;
+  }
+
+  .footer-content{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .logo img{
+    height:65px;
+  }
+}
+
+/* ================= REDES SOCIALES ================= */
 
 .whatsapp,
 .facebook-float,
@@ -254,27 +477,38 @@ header{
 .instagram-float{ bottom:160px; background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
 .facebook-float{ bottom:230px; background:#1877F2; }
 
+.facebook-float i,
+.instagram-float i,
+.tiktok-float i{
+  color:white;
+  font-size:22px;
+}
+
+.whatsapp img{
+  width:28px;
+  height:28px;
+}
+
 .whatsapp:hover,
 .facebook-float:hover,
 .instagram-float:hover,
 .tiktok-float:hover{
   transform:scale(1.1);
 }
-
-/* RESPONSIVE */
-@media(max-width:900px){
-
-  .grid-3,
-  .steps{
-    grid-template-columns:1fr;
-  }
-
-  .destacado{
-    transform:none;
-  }
-
-  .footer-content{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+.destacado::before{
+  content:"Más popular";
+  position:absolute;
+  top:-14px; /* 🔥 fuera del card */
+  left:50%;
+  transform:translateX(-50%);
+  
+  background:var(--amarillo);
+  padding:7px 20px;
+  border-radius:20px;
+  
+  font-size:12px;
+  font-weight:bold;
+  
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  z-index:10;
 }
