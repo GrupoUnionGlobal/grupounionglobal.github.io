@@ -74,3 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+<script>
+function abrirImg(src){
+  const box = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+
+  img.src = src;
+  box.style.display = "flex";
+}
+
+function cerrarImg(){
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
