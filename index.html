@@ -303,6 +303,34 @@ target="_blank">Niños</a>
 </footer>
 
 <script src="script.js"></script>
+<div id="popup" class="popup-overlay">
+  <div class="popup-box">
+    
+    <span class="popup-close" onclick="cerrarPopup()">✕</span>
 
+    <h2>🌿 ¡Te esperamos!</h2>
+    
+    <p>
+      Estamos abiertos <strong>sábados, domingos y festivos</strong><br>
+      para que vivas la experiencia panelera en familia.
+    </p>
+
+    <a href="#planes" class="btn btn-primary">Ver planes</a>
+
+  </div>
+</div>
+  <script>
+function cerrarPopup(){
+  document.getElementById("popup").style.display = "none";
+}
+
+/* mostrar solo una vez por sesión */
+window.onload = function(){
+  if(!sessionStorage.getItem("popupVisto")){
+    document.getElementById("popup").style.display = "flex";
+    sessionStorage.setItem("popupVisto","true");
+  }
+}
+</script>
 </body>
 </html>
