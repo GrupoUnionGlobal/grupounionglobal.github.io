@@ -197,6 +197,8 @@ nav a:hover::after{
 
 /* ================= PLANES ================= */
 
+/* ================= PLANES ================= */
+
 .plan-card{
   position: relative;
   text-align: center;
@@ -205,7 +207,7 @@ nav a:hover::after{
   background: linear-gradient(180deg,#ffffff,#f7fbf8);
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   transition: 0.35s;
-  overflow: visible;
+  overflow: hidden; /* 🔥 clave */
 }
 
 .plan-card:hover{
@@ -213,11 +215,38 @@ nav a:hover::after{
   box-shadow: 0 30px 70px rgba(0,0,0,0.15);
 }
 
+/* contenido encima */
 .plan-card > *{
   position:relative;
   z-index:2;
 }
 
+/* 🔥 BRILLO (SIN BUG) */
+.plan-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:60%;
+  height:100%;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+
+  transform:skewX(-20deg);
+  transition:0.8s ease;
+  z-index:1;
+}
+
+.plan-card:hover::after{
+  left:130%;
+}
+
+/* PRECIOS */
 .plan-price{
   font-size:26px;
   font-weight:bold;
@@ -229,6 +258,7 @@ nav a:hover::after{
   opacity:.8;
 }
 
+/* LISTA */
 .plan-list{
   list-style:none;
   margin:18px 0;
@@ -239,6 +269,7 @@ nav a:hover::after{
   padding:6px 0;
 }
 
+/* DESTACADO */
 .destacado{
   border:2px solid var(--amarillo);
   transform:scale(1.06);
@@ -250,7 +281,7 @@ nav a:hover::after{
 .destacado::before{
   content:"Más popular";
   position:absolute;
-  top:-12px;
+  top:10px; /* 🔥 cambiado para evitar recorte */
   left:50%;
   transform:translateX(-50%);
   background:var(--amarillo);
@@ -262,6 +293,7 @@ nav a:hover::after{
   z-index:10;
 }
 
+/* BOTONES */
 .plan-buttons{
   display:flex;
   gap:10px;
@@ -271,34 +303,6 @@ nav a:hover::after{
 .plan-buttons a{
   flex:1;
   text-align:center;
-}
-.plan-card::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-150%;
-  width:80%;
-  height:100%;
-  
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-
-  transform:skewX(-25deg);
-  transition:0.8s;
-  z-index:1;
-
-  /* 🔥 CLAVE: recorte sin romper el badge */
-  clip-path: inset(0 round 22px);
-}
-.plan-card:hover::after{
-  left:150%;
-}
-.plan-card{
-  isolation: isolate;
 }
 /* ================= EXPERIENCIA ================= */
 
