@@ -196,6 +196,7 @@ nav a:hover::after{
 }
 
 /* ================= PLANES ================= */
+/* ================= PLANES ================= */
 .plan-card{
   position: relative;
   text-align: center;
@@ -219,7 +220,7 @@ nav a:hover::after{
   z-index:2;
 }
 
-/* 🔥 BRILLO (SIN BUG) */
+/* 🔥 BRILLO ARREGLADO */
 .plan-card::after{
   content:"";
   position:absolute;
@@ -227,19 +228,45 @@ nav a:hover::after{
   left:-120%;
   width:60%;
   height:100%;
-
   background:linear-gradient(
     120deg,
     transparent,
     rgba(255,255,255,0.25),
     transparent
   );
-
   transform:skewX(-20deg);
   transition:0.8s ease;
-  z-index:1;
-
+  z-index:0; /* 🔥 debajo del contenido */
   border-radius:22px;
+}
+
+.plan-card:hover::after{
+  left:120%;
+}
+
+/* DESTACADO */
+.destacado{
+  border:2px solid var(--amarillo);
+  transform:scale(1.06);
+  background:linear-gradient(180deg,#fff,#fffdf5);
+  position: relative;
+  z-index:2;
+}
+
+/* 🔥 BADGE (ÚNICO Y CORRECTO) */
+.destacado::before{
+  content:"Más popular";
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--amarillo);
+  padding:7px 20px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  z-index:5; /* 🔥 encima de todo */
 }
 
 /* PRECIOS */
