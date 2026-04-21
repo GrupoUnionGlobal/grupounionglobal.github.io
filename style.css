@@ -453,7 +453,7 @@ nav a:hover::after{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:25px;
-  overflow:hidden; /* 🔥 esto evita cortes */
+  overflow:visible; /* 🔥 esto evita cortes */
 }
 .plan-card{
   position:relative;
