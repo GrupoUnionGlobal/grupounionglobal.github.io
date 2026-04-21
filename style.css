@@ -274,21 +274,6 @@ nav a:hover::after{
   position: relative;
 }
 
-.destacado::before{
-  content:"Más popular";
-  position:absolute;
-  top:10px; /* 🔥 cambiado para evitar recorte */
-  left:50%;
-  transform:translateX(-50%);
-  background:var(--amarillo);
-  padding:6px 18px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
-  box-shadow:0 8px 20px rgba(0,0,0,0.25);
-  z-index:10;
-}
-
 /* BOTONES */
 .plan-buttons{
   display:flex;
@@ -510,5 +495,19 @@ nav a:hover::after{
   font-weight:bold;
   
   box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  z-index:10;
+}
+.destacado::before{
+  content:"Más popular";
+  position:absolute;
+  top:10px; /* 🔥 cambiado para evitar recorte */
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--amarillo);
+  padding:6px 18px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
   z-index:10;
 }
