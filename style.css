@@ -178,6 +178,7 @@ nav a:hover::after{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:25px;
+  overflow:visible;
 }
 
 /* CARDS */
@@ -194,7 +195,7 @@ nav a:hover::after{
   box-shadow:var(--sombra-media);
 }
 
-/* ================= PLANES (FIX DEFINITIVO) ================= */
+/* ================= PLANES ================= */
 
 .plan-card{
   position: relative;
@@ -212,31 +213,6 @@ nav a:hover::after{
   box-shadow: 0 30px 70px rgba(0,0,0,0.15);
 }
 
-/* brillo premium */
-.plan-card::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-150%;
-  width:80%;
-  height:100%;
-
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-
-  transform:skewX(-25deg);
-  transition:0.8s;
-  z-index:1;
-
-  /* 🔥 recorta SOLO el brillo dentro del card */
-  clip-path: inset(0 round 22px);
-}
-
-/* contenido encima */
 .plan-card > *{
   position:relative;
   z-index:2;
@@ -253,7 +229,6 @@ nav a:hover::after{
   opacity:.8;
 }
 
-/* lista limpia */
 .plan-list{
   list-style:none;
   margin:18px 0;
@@ -264,12 +239,12 @@ nav a:hover::after{
   padding:6px 0;
 }
 
-/* destacado */
 .destacado{
   border:2px solid var(--amarillo);
   transform:scale(1.06);
   background:linear-gradient(180deg,#fff,#fffdf5);
   z-index:2;
+  position: relative;
 }
 
 .destacado::before{
@@ -451,43 +426,9 @@ nav a:hover::after{
     height:65px;
   }
 }
-.grid-3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  overflow:visible; /* 🔥 esto evita cortes */
-}
-.plan-card{
-  position:relative;
-  overflow:visible;
-}
 
-.plan-card::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-150%;
-  width:80%;
-  height:100%;
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-  transform:skewX(-25deg);
-  transition:0.8s;
-  z-index:1;
-}
+/* ================= REDES SOCIALES ================= */
 
-.plan-card:hover::after{
-  left:150%;
-}
-
-.plan-card > *{
-  position:relative;
-  z-index:2;
-}
 .whatsapp,
 .facebook-float,
 .instagram-float,
@@ -500,52 +441,19 @@ nav a:hover::after{
   display:flex;
   justify-content:center;
   align-items:center;
-  color:white;
-  font-size:22px;
-  z-index:99999; /* 🔥 MÁS ALTO QUE TODO */
+  z-index:999999;
   transition:.2s;
 }
-.facebook-float i,
-.instagram-float i,
-.tiktok-float i{
-  color:white;
-}
 
-.whatsapp img{
-  width:28px;
-  height:28px;
-}
-.popup-overlay{
-  z-index:9000; /* 🔥 debajo de redes */
-}
-/* ================= FIX REDES SOCIALES ================= */
-
-.whatsapp,
-.facebook-float,
-.instagram-float,
-.tiktok-float{
-  position:fixed !important;
-  right:20px;
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  display:flex !important;
-  justify-content:center;
-  align-items:center;
-  z-index:999999 !important; /* 🔥 encima ABSOLUTO */
-}
-
-/* Colores visibles (por si se perdieron) */
 .whatsapp{ bottom:20px; background:#25D366; }
 .tiktok-float{ bottom:90px; background:#000; }
 .instagram-float{ bottom:160px; background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
 .facebook-float{ bottom:230px; background:#1877F2; }
 
-/* iconos */
 .facebook-float i,
 .instagram-float i,
 .tiktok-float i{
-  color:white !important;
+  color:white;
   font-size:22px;
 }
 
@@ -554,24 +462,9 @@ nav a:hover::after{
   height:28px;
 }
 
-/* hover */
 .whatsapp:hover,
 .facebook-float:hover,
 .instagram-float:hover,
 .tiktok-float:hover{
   transform:scale(1.1);
-}
-.destacado{
-  position: relative;
-}
-.plan-card{
-  position:relative;
-  overflow:visible; /* deja salir el badge */
-}
-
-/* 🔥 contenedor del brillo */
-.plan-inner{
-  position:relative;
-  overflow:hidden; /* aquí sí se recorta el brillo */
-  border-radius:22px;
 }
